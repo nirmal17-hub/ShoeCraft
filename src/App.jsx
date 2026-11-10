@@ -8,6 +8,7 @@ import Shop from './pages/users/Shop'
 import Product from './pages/users/Product'
 import Category from './pages/users/Category'
 import About from './pages/users/About'
+import ChangePassword from './pages/users/ChangePassword'
 import Contact from './pages/users/Contact'
 import NotFound from './pages/NotFound'
 import AddProduct from './pages/admin/Addproduct'
@@ -37,6 +38,7 @@ function App() {
   <Route path='/contact' element={<Contact/>}/>
   <Route path='/profile' element={<Profile/>}/>
   <Route path='/About' element={<About/>}/>
+   <Route path='/change-password' element={<ChangePassword/>}/>
   <Route path='/category' element={<Category/>}/>
   <Route path="/collections/:id" element={<Product/>} />
   <Route path="/cart" element={<Cart/>} />
