@@ -3,6 +3,7 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 
 function Contact() {
+  const API_URL = import.meta.env.VITE_API_URL
   const [formData, setFormData] = useState({
     name: '',
     email: '',
