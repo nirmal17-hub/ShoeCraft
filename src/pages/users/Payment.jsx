@@ -23,7 +23,7 @@ function Payment() {
   const [error, setError] = useState('')
   const [paymentSuccess, setPaymentSuccess] = useState(false)
   const [purchaseDate, setPurchaseDate] = useState('')
-
+  const API_URL = import.meta.env.VITE_API_URL
   // Load only active cart products belonging to this user
   useEffect(() => {
     const fetchCheckoutItems = async () => {
