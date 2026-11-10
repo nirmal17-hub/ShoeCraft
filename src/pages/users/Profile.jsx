@@ -106,7 +106,7 @@ function Profile() {
       setMessage("");
 
       const response = await fetch(
-        `http://localhost:3000/users/${user.id}`,
+        `${API_URL}/users/${user.id}`,
         {
           method: "PATCH",
           headers: {
