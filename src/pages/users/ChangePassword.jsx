@@ -11,7 +11,7 @@ function ChangePassword() {
   const [confirmPassword, setConfirmPassword] = useState('')
   const [message, setMessage] = useState('')
   const [error, setError] = useState('')
-
+  const API_URL = import.meta.env.VITE_API_URL
   if (!user || !user.id) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-gray-100">
