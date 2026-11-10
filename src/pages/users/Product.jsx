@@ -17,7 +17,7 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 
 function Product() {
-  const API = 'http://localhost:3000'
+  const API = `${API_URL}`
 
   const { id } = useParams()
   const navigate = useNavigate()
