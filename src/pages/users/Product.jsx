@@ -17,6 +17,7 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 
 function Product() {
+  const API_URL = import.meta.env.VITE_API_URL
   const API = `${API_URL}`
 
   const { id } = useParams()
@@ -25,7 +26,7 @@ function Product() {
   const [product, setProduct] = useState(null)
   const [loading, setLoading] = useState(true)
   const [cartLoading, setCartLoading] = useState(false)
-  const API_URL = import.meta.env.VITE_API_URL
+  
   const [user, setUser] = useState(() => {
     return JSON.parse(localStorage.getItem('user') || 'null')
   })
