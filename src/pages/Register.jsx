@@ -9,7 +9,7 @@ function Register() {
   const [password, setPassword] = useState("")
   const [confirmpassword, setConfirmpassword] = useState("")
   const [error, setError] = useState("")
-
+  const API_URL = import.meta.env.VITE_API_URL
 
     function registration(e){
         e.preventDefault();
