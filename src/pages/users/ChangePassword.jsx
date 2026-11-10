@@ -40,6 +40,7 @@ function ChangePassword() {
           <h2 className="text-xl font-bold mb-4">
             Please login first
           </h2>
+
           <button
             onClick={() => navigate('/')}
             className="bg-black text-white px-6 py-3 rounded-lg"
@@ -163,16 +164,16 @@ function ChangePassword() {
   )
 
   return (
-    <div className="min-h-screen bg-[#f8f8f6] flex flex-col">
+    <div className="min-h-screen w-full bg-[#f8f8f6] flex flex-col overflow-x-hidden">
 
       <Header />
 
       <main className="flex-1 w-full">
 
         {/* Hero Section */}
-        <section className="w-full bg-neutral-950 text-white px-6 md:px-12 lg:px-20 py-12 md:py-16">
+        <section className="w-full bg-neutral-950 text-white px-4 md:px-8 py-12 md:py-16">
 
-          <div className="max-w-[1600px] mx-auto">
+          <div className="w-full">
 
             <button
               onClick={() => navigate('/profile')}
@@ -210,14 +211,14 @@ function ChangePassword() {
         </section>
 
         {/* Main Content */}
-        <section className="w-full px-5 md:px-12 lg:px-20 py-12 md:py-16">
+        <section className="w-full px-3 md:px-5 py-10 md:py-14">
 
-          <div className="max-w-[1600px] mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
+          <div className="w-full grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
 
             {/* Left Information */}
             <div className="lg:col-span-1">
 
-              <div className="bg-amber-50 border border-amber-100 rounded-2xl p-7 md:p-9">
+              <div className="bg-amber-50 border border-amber-100 rounded-2xl p-7 md:p-9 h-full">
 
                 <div className="w-14 h-14 bg-amber-100 rounded-2xl flex items-center justify-center mb-6">
                   <LockKeyhole size={27} className="text-amber-800" />
@@ -257,29 +258,32 @@ function ChangePassword() {
                   </div>
 
                 </div>
-              </div>
 
-              <div className="mt-6 bg-white border border-gray-200 rounded-2xl p-6 flex items-center gap-4">
-                <div className="w-12 h-12 bg-gray-100 rounded-xl flex items-center justify-center">
-                  <KeyRound size={23} className="text-gray-700" />
+                <div className="mt-10 bg-white border border-amber-100 rounded-xl p-5 flex items-center gap-4">
+
+                  <div className="w-12 h-12 bg-gray-100 rounded-xl flex items-center justify-center shrink-0">
+                    <KeyRound size={23} className="text-gray-700" />
+                  </div>
+
+                  <div>
+                    <h3 className="font-bold text-gray-900 text-sm">
+                      Password Security
+                    </h3>
+
+                    <p className="text-xs text-gray-500 mt-1">
+                      Keep your account safe and secure.
+                    </p>
+                  </div>
+
                 </div>
 
-                <div>
-                  <h3 className="font-bold text-gray-900 text-sm">
-                    Password Security
-                  </h3>
-                  <p className="text-xs text-gray-500 mt-1">
-                    Keep your account safe and secure.
-                  </p>
-                </div>
               </div>
-
             </div>
 
             {/* Password Form */}
             <div className="lg:col-span-2">
 
-              <div className="bg-white border border-gray-200 rounded-2xl shadow-sm overflow-hidden">
+              <div className="bg-white border border-gray-200 rounded-2xl shadow-sm overflow-hidden h-full">
 
                 <div className="px-6 md:px-10 py-7 border-b border-gray-100">
 
@@ -369,7 +373,6 @@ function ChangePassword() {
             </div>
 
           </div>
-
         </section>
 
       </main>
