@@ -14,7 +14,7 @@ function Category() {
   const [category, setCategory] = useState(categoryName || 'All')
   const API_URL = import.meta.env.VITE_API_URL
   useEffect(() => {
-    fetch('http://localhost:3000/products')
+    fetch(`${API_URL}/products`)
       .then((response) => {
         if (!response.ok) {
           throw new Error('Failed to fetch products')
