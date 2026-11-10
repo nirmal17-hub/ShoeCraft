@@ -28,9 +28,6 @@ function App() {
 
   return (
     <>
-      <Routes>
-        <Route path='/category' element={<Category/>}/>
-       </Routes>
 <LoadingTransition />
  <Routes>
   <Route path='/' element={<Home/>}/>
@@ -42,7 +39,7 @@ function App() {
   <Route path='/profile' element={<Profile/>}/>
   <Route path='/About' element={<About/>}/>
    <Route path='/change-password' element={<ChangePassword/>}/>
-  
+  <Route path='/category' element={<Category/>}/>
   <Route path="/collections/:id" element={<Product/>} />
   <Route path="/cart" element={<Cart/>} />
   <Route path="/orders" element={<Orders/>} />
