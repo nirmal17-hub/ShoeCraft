@@ -12,7 +12,7 @@ function Category() {
   const [error, setError] = useState('')
   const [search, setSearch] = useState('')
   const [category, setCategory] = useState(categoryName || 'All')
-
+  const API_URL = import.meta.env.VITE_API_URL
   useEffect(() => {
     fetch('http://localhost:3000/products')
       .then((response) => {
