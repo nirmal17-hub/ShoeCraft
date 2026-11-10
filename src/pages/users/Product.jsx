@@ -25,7 +25,7 @@ function Product() {
   const [product, setProduct] = useState(null)
   const [loading, setLoading] = useState(true)
   const [cartLoading, setCartLoading] = useState(false)
-
+  const API_URL = import.meta.env.VITE_API_URL
   const [user, setUser] = useState(() => {
     return JSON.parse(localStorage.getItem('user') || 'null')
   })
