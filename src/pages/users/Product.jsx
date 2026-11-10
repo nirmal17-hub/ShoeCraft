@@ -18,7 +18,6 @@ import Footer from './components/Footer'
 
 function Product() {
   const API_URL = import.meta.env.VITE_API_URL
-  const API = `${API_URL}`
 
   const { id } = useParams()
   const navigate = useNavigate()
@@ -70,7 +69,7 @@ function Product() {
       try {
         setLoading(true)
 
-        const response = await fetch(`${API}/products/${id}`)
+        const response = await fetch(`${API_URL}/products/${id}`)
 
         if (!response.ok) {
           throw new Error('Product not found')
@@ -97,7 +96,7 @@ function Product() {
     }
 
     try {
-      const response = await fetch(`${API}/cart`)
+      const response = await fetch(`${API_URL}/cart`)
 
       if (!response.ok) {
         throw new Error('Unable to check cart')
@@ -131,7 +130,7 @@ function Product() {
 
   // Add product to JSON Server cart
   const addToCart = async (userId) => {
-    const response = await fetch(`${API}/cart`)
+    const response = await fetch(`${API_URL}/cart`)
 
     if (!response.ok) {
       throw new Error('Unable to fetch cart')
@@ -147,7 +146,7 @@ function Product() {
 
     if (existingItem) {
       const updateResponse = await fetch(
-        `${API}/cart/${existingItem.id}`,
+        `${API_URL}/cart/${existingItem.id}`,
         {
           method: 'PATCH',
           headers: {
@@ -171,7 +170,7 @@ function Product() {
       }
     }
 
-    const addResponse = await fetch(`${API}/cart`, {
+    const addResponse = await fetch(`${API_URL}/cart`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -277,7 +276,7 @@ function Product() {
     setLoginLoading(true)
 
     try {
-      const response = await fetch(`${API}/users`)
+      const response = await fetch(`${API_URL}/users`)
 
       if (!response.ok) {
         throw new Error('Unable to fetch users')
