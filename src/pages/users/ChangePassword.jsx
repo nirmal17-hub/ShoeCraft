@@ -221,7 +221,7 @@ function ChangePassword() {
 
               <button
                 type="button"
-                onClick={() => navigate('/user/home')}
+                onClick={() => navigate('/profile')}
                 className="border border-gray-300 rounded-lg px-6 py-3 font-semibold hover:bg-gray-100 transition"
               >
                 Cancel
