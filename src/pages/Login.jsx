@@ -6,7 +6,7 @@ function Login() {
   const [password, setPassword] = useState('')
   const [error, setError] = useState('')
   const [loading, setLoading] = useState(false)
-
+  const API_URL = import.meta.env.VITE_API_URL
   const navigate = useNavigate()
 
   async function handleLogin(e) {
