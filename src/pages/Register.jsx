@@ -18,7 +18,7 @@ function Register() {
           setError("Passwords Does Not Match");
           return;
         }
-        fetch("http://localhost:3000/users")
+        fetch(`${API_URL}/users`)
         .then((data)=>{
           const exuser = data.find(
             (item) => item.email === email
