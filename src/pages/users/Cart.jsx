@@ -32,8 +32,8 @@ function Cart() {
         setError('')
 
         const [cartResponse, productResponse] = await Promise.all([
-          fetch('http://localhost:3000/cart'),
-          fetch('http://localhost:3000/products')
+          fetch(`${API_URL}/cart`),
+          fetch(`${API_URL}/products`)
         ])
 
         if (!cartResponse.ok || !productResponse.ok) {
@@ -106,7 +106,7 @@ function Cart() {
 
     try {
       const response = await fetch(
-        `http://localhost:3000/cart/${item.id}`,
+        `${API_URL}/cart/${item.id}`,
         {
           method: 'PATCH',
           headers: {
@@ -128,7 +128,7 @@ function Cart() {
 
       try {
         const response = await fetch(
-          `http://localhost:3000/cart/${item.id}`
+          `${API_URL}/cart/${item.id}`
         )
 
         if (response.ok) {
@@ -157,7 +157,7 @@ function Cart() {
       setError('')
 
       const response = await fetch(
-        `http://localhost:3000/cart/${item.id}`,
+        `${API_URL}/cart/${item.id}`,
         {
           method: 'DELETE'
         }
