@@ -15,7 +15,7 @@ function Login() {
     setLoading(true)
 
     try {
-      const database = await fetch('http://localhost:3000/users')
+      const database = await fetch(`${API_URL}/users`)
 
       if (!database.ok) {
         throw new Error('Could not connect to the server')
