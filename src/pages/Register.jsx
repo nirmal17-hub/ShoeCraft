@@ -29,7 +29,7 @@ function Register() {
           return;
         })
         
-        fetch("http://localhost:3000/users",{
+        fetch(`${API_URL}/users`,{
           method : "POST",
           headers : {
             "Content-Type" : "application/json"
