@@ -9,11 +9,11 @@ function Shop() {
   const [error, setError] = useState('')
   const [search, setSearch] = useState('')
   const [category, setCategory] = useState('All')
-
+  const API_URL = import.meta.env.VITE_API_URL
   const navigate = useNavigate()
 
   useEffect(() => {
-    fetch('http://localhost:3000/products')
+    fetch(`${API_URL}/products`)
       .then((response) => {
         if (!response.ok) {
           throw new Error('Failed to fetch products')
