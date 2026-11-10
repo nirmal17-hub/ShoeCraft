@@ -17,7 +17,7 @@ function Orders() {
   const [orders, setOrders] = useState([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState('')
-
+  const API_URL = import.meta.env.VITE_API_URL
   const user = JSON.parse(
     localStorage.getItem('user') || 'null'
   )
