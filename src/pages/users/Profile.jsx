@@ -32,7 +32,7 @@ function Profile() {
   const [saving, setSaving] = useState(false);
   const [loading, setLoading] = useState(true);
   const [message, setMessage] = useState("");
-
+  const API_URL = import.meta.env.VITE_API_URL
   // Fetch latest user details from JSON Server
   useEffect(() => {
     const fetchUser = async () => {
