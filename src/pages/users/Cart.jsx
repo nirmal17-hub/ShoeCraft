@@ -284,7 +284,7 @@ function Cart() {
               </p>
 
               <Link
-                to="/shop"
+                to="/collections"
                 className="mt-6 inline-flex items-center gap-2 rounded-lg bg-black px-6 py-3 font-semibold text-white hover:bg-amber-800"
               >
                 Explore Products
