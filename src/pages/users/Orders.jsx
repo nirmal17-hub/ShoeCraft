@@ -37,8 +37,8 @@ function Orders() {
         }
 
         const [cartResponse, productsResponse] = await Promise.all([
-          fetch('http://localhost:3000/cart'),
-          fetch('http://localhost:3000/products')
+          fetch(`${API_URL}/cart`),
+          fetch(`${API_URL}/products`)
         ])
 
         if (!cartResponse.ok || !productsResponse.ok) {
