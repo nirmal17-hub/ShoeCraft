@@ -28,6 +28,8 @@ function App() {
 
   return (
     <>
+      <Routes>
+       </Routes>
 <LoadingTransition />
  <Routes>
   <Route path='/' element={<Home/>}/>
