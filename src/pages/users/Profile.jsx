@@ -47,7 +47,7 @@ function Profile() {
         }
 
         const response = await fetch(
-          `http://localhost:3000/users/${loggedUser.id}`
+          `${API_URL}/users/${loggedUser.id}`
         );
 
         if (!response.ok) {
